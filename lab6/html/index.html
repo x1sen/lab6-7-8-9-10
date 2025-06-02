@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин игрушек</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать в Магазин Игрушек!</h1>
+    </header>
+
+    <main>
+        <section class="toy-display-section">
+            <div class="toy-info-block">
+                <label for="toy-dropdown">Выберите игрушку:</label>
+                <select id="toy-dropdown"></select>
+
+                <h2 id="manufacturer-heading">Производитель игрушки</h2>
+                <div id="description-container">
+                </div>
+            </div>
+
+            <div class="toy-image-block">
+                <img src="../resources/default.jpg" alt="Игрушка" id="toy-image">
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="controls-section">
+            <h2>Управление информацией</h2>
+            <div class="control-group">
+                <button id="add-toy-btn">Вставить новое название в список</button>
+            </div>
+            <div class="control-group">
+                <button id="change-heading-btn">Изменить текст заголовка</button>
+            </div>
+            <div class="control-group">
+                <button id="add-paragraph-btn">Вставить новый параграф</button>
+                <label for="paragraph-position-dropdown">Позиция:</label>
+                <select id="paragraph-position-dropdown">
+                    <option value="below">Ниже</option>
+                    <option value="above">Выше</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <button id="change-description-btn">Изменить основное описание</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Магазин Игрушек. Все права защищены.</p>
+    </footer>
+
+    <script src="../js/classes.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

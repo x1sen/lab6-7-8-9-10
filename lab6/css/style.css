@@ -1,0 +1,196 @@
+:root {
+    --main-bg-light: #f7f0f8;
+    --soft-purple: #c5a4d6;
+    --light-purple: #e0c8ed;
+    --pale-pink: #f0d5e1;
+    --dark-purple-text: #5e4c7d;
+    --accent-blue: #a7c5ed;
+    --text-color: #4a4a4a;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg-light);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--soft-purple);
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+h1 {
+    color: white;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+h2 {
+    color: var(--dark-purple-text);
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.08);
+}
+
+.toy-display-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+    align-items: flex-start;
+}
+
+.toy-info-block {
+    flex: 2;
+    min-width: 300px;
+}
+
+.toy-image-block {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--pale-pink);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.toy-image-block img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.18);
+    transition: transform 0.4s ease-in-out;
+}
+
+.toy-image-block img:hover {
+    transform: scale(1.05);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--dark-purple-text);
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 25px;
+    border: 1px solid var(--soft-purple);
+    border-radius: 6px;
+    background-color: var(--light-purple);
+    color: var(--dark-purple-text);
+    font-size: 1em;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%235e4c7d' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(167, 197, 237, 0.4);
+}
+
+#manufacturer-heading {
+    color: var(--soft-purple);
+    margin-top: 25px;
+    border-bottom: 2px solid var(--pale-pink);
+    padding-bottom: 12px;
+}
+
+.description-paragraph {
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.controls-section {
+    margin-top: 40px;
+    border-top: 1px solid var(--light-purple);
+    padding-top: 30px;
+}
+
+.control-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+button {
+    background-color: var(--accent-blue);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    background-color: #8dbfe5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    background-color: var(--dark-purple-text);
+    color: white;
+    font-size: 0.95em;
+    border-radius: 0 0 8px 8px;
+}
+
+@media (max-width: 768px) {
+    .toy-display-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .toy-info-block,
+    .toy-image-block {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .control-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button, select {
+        width: 100%;
+    }
+}
